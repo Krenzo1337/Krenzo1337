@@ -5,7 +5,7 @@
 
 - 🌱 I’m currently learning **UI like C++**
 
-- 🛒 I’m also doing UIS if u need **C#**
+- 🛒 I’m also doing UIS if u need **C#** -> https://discord.gg/SP9pHFnayd
 
 - 📫 How to reach me **ekrabots@gmail.com**
 
