@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://slapp.in/dashboard/ -->
+<html lang="en" coupert-item="9AF8D9A4E502F3784AD24272D81F0381"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slap - Dashboard</title>
+
+    <!-- CSS / Bootstrap -->
+    <link href="./Slap - Dashboard_files/dashboard.css" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="./Slap - Dashboard_files/aos.css" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="./Slap - Dashboard_files/all.css">
+
+    <!-- JQUERY -->
+    <script src="./Slap - Dashboard_files/jquery.min.js.stáhnout"></script>
+
+    <!-- SNACKBAR -->
+    <link rel="stylesheet" href="./Slap - Dashboard_files/snackbar.css">
+    <script src="./Slap - Dashboard_files/snackbar.js.stáhnout"></script>
+
+    <!-- AOS -->
+    <script src="./Slap - Dashboard_files/aos.js.stáhnout"></script>
+    
+    <link rel="shortcut icon" type="image/x-icon" href="./Slap - Dashboard_files/logo.png">
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+        <!-- <section id="teste-l"></section> -->
+    <section id="dashboard" class="">
+        <a href="https://slapp.in/">
+            <img src="./Slap - Dashboard_files/logo.png" alt="" style="width: 3.5rem;">
+        </a>
+        <div class="container h-100">
+            <div class="d-flex h-100 justify-content-center align-items-center">
+                <div class="row eq-height justify-content-center">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="profile box">
+                                    <div class="logout">
+                                        <a href="https://slapp.in/dashboard/php/logout.php?key=a3fb4e53598c634c182bc604475d710f"><i class="fas fa-sign-out-alt"></i></a>                                    </div>
+                                                                        <div class="row justify-content-center text-center">
+                                        <div class="col-12">
+                                            <div class="content">
+                                                <div class="profile-picture">
+                                                    <form style="position: relative;" id="form-picture" method="POST" enctype="multipart/form-data">
+                                                        <label for="profile-picture-input">
+                                                            <img src="./Slap - Dashboard_files/0N9esGOsBQ.png" alt="Profile picture" class="img-fluid">                                                            <div class="overlay-picture">
+                                                                <i class="fas fa-camera"></i>
+                                                            </div>
+                                                            <input style="display:none;" name="image" id="profile-picture-input" type="file" accept=".jpg,.jpeg,.png">
+                                                        </label>
+                                                        <i onclick="remove_profile_picture()" style="position: absolute; color: rgba(209, 102, 102); z-index: 999999; cursor: pointer;" title="Remove profile picture" class="fas fa-trash-alt"></i>
+                                                    </form>
+                                                </div>
+                                                <span class="username">kendrays</span>
+                                                <span class="tag">Normal</span>                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="personal-info box">
+                                    <div class="title">
+                                        <h2>Personal information</h2>
+                                    </div>
+                                    <hr>
+                                    <div class="info">
+                                        <div class="row mb-2 content">
+                                            <div class="col-md-4">
+                                                <span>Username</span>
+                                            </div>
+                                            <div class="col-md-8 text-right">
+                                                <span>kendrays</span>
+                                            </div>
+                                        </div>
+                                        <div class="row my-2 content">
+                                            <div class="col-md-4">
+                                                <span>E-mail</span>
+                                            </div>
+                                            <div class="col-md-8 text-right">
+                                                <span>patricekbojtar@seznam.cz</span>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2 content">
+                                            <div class="col-md-4">
+                                                <span>Password</span>
+                                                <span onclick="switchCarousel(3)">Change</span>
+                                            </div>
+                                            <div class="col-md-8 text-right">
+                                                <span>•••••••••••</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="hwid-info box px-m">
+                                    <div class="row align-items-center">
+                                                                                <div class="col-md-4">
+                                            <div class="title">
+                                                <span>HWID</span>
+                                                <span><a class="disabled" onclick="notify(&#39;You need to purchase to reset your hwid&#39;, 0)" href="https://slapp.in/dashboard/#">Reset</a></span>                                            </div>
+                                        </div>
+                                        <div class="col-md-8 text-right">
+                                            <div class="info">
+                                                <span title="Login to the client to get a new hwid.">You need to <a style="color: var(--primary)" href="https://slapp.in/dashboard/product/?product=1">purchase</a> to set a hwid.</span>                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="temp-disabled box px-m">
+                                    <div class="row align-items-center">
+                                                                                <div class="col-6">
+                                            <div class="title">
+                                                <span title="Disables your authentication to the client">Temp disabled</span>
+                                                <span>Turned off</span>                                            </div>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <a title="warning: you cannot login to the client when it is enabled" onclick="tempDisable(1)" href="https://slapp.in/dashboard/#0" class="button primary outline rounded-circle low-padding low-weight medium-size">Enable</a>                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 ">
+                        <div class="box-right">
+                            <div id="mainCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                                <div class="carousel-inner">
+                                    <!-- item -->
+                                    <div class="carousel-item active">
+                                        <div class="product box mb-3">
+                                            <div class="row">
+                                                <div class="col-5">
+                                                    <h2>Slap Client <span style="color: var(--primary); font-weight:700; font-size: .9rem;">v1.29</span></h2>                                                </div>
+                                                <div class="col-7 text-right">
+                                                    <a href="https://slapp.in/dashboard/product/?product=1" class="button primary outline rounded-circle low-padding low-weight medium-size">View Info</a>                                                </div>
+                                            </div>
+                                            <div class="box d-flex justify-content-center mb-0">
+                                                <span>Not purchased</span>                                            </div>
+                                        </div>
+                                        <div class="messages box mb-3">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h2 class="mb-0">Announcements</h2>
+                                                </div>
+                                                <div class="col-6 text-right">
+                                                    <a onclick="switchCarousel(1)" href="https://slapp.in/dashboard/#0" class="button primary outline rounded-circle low-padding low-weight medium-size">View</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="changelogs box mb-2">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <h2 class="mb-0">Changelogs</h2>
+                                                </div>
+                                                <div class="col-6 text-right">
+                                                    <a onclick="switchCarousel(2)" href="https://slapp.in/dashboard/#0" class="button primary outline rounded-circle low-padding low-weight medium-size">View</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2">
+                                            <div class="col-lg-6">
+                                                <div class="cape box">
+                                                    <div class="row">
+                                                        <div class="col-6 d-flex align-items-center">
+                                                            <div>
+                                                                <h2 class="mb-2" style="position: relative; left:.25rem;">Profiles</h2>
+                                                                <a href="https://slapp.in/dashboard/profiles/" class="button primary outline rounded-circle low-padding low-weight medium-size" style="font-size: .6rem; padding: 0.35rem 1.5rem">View</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-end">
+                                                            <img src="./Slap - Dashboard_files/profiles.png" alt="" class="img-fluid" width="48.5rem">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="cape box">
+                                                    <div class="row">
+                                                        <div class="col-6 d-flex align-items-center">
+                                                            <div>
+                                                                <h2 class="mb-2" style="position: relative; left:.25rem;">Capes</h2>
+                                                                <a href="https://slapp.in/dashboard/capes/" class="button primary outline rounded-circle low-padding low-weight medium-size" style="font-size: .6rem; padding: 0.35rem 1.5rem">View</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 d-flex justify-content-end">
+                                                            <img src="./Slap - Dashboard_files/1.png" alt="" class="img-fluid" width="45rem">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="discount-box" onclick="copy_code(&#39;theres no coupon code bro&#39;)">
+                                            <p class="mb-0">NO COUPON AT THIS MOMENT<span style="font-weight: 400; font-size: .8rem"> New offers soon</span></p>
+                                            <p id="copy-text-p" class="mb-0">Click to copy the coupon code</p>
+                                        </div>
+                                    </div>
+                                    <!-- item -->
+
+                                    <!-- announcements -->
+                                    <div class="carousel-item">
+                                        <div class="title d-flex align-items-center">
+                                            <i onclick="switchCarousel(0)" class="fas fa-chevron-left"></i>
+                                            <h2>Announcements</h2>
+                                        </div>
+                                        
+                                                <div class="announcements box mb-3">
+                                                <div class="title">
+                                                    <div class="row">
+                                                        <div class="col-md-7">
+                                                            <div class="d-flex align-items-center"><img src="./Slap - Dashboard_files/Za2zHmpEqz.png" alt="Profile picture" class="img-fluid"><div class="user">
+                                                                <h3>v0x</h3>
+                                                                <span>Admin</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">05/17/2023</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <p class="mb-0">Hello! I would like to inform y`ll that today we will be performing maintenance on Slap Client. The estimated completion time for the maintenance is approximately 10 hours. We apologize for any inconvenience caused.</p>
+                                            </div>
+                                        </div>
+                                                <div class="announcements box mb-3">
+                                                <div class="title">
+                                                    <div class="row">
+                                                        <div class="col-md-7">
+                                                            <div class="d-flex align-items-center"><img src="./Slap - Dashboard_files/Za2zHmpEqz.png" alt="Profile picture" class="img-fluid"><div class="user">
+                                                                <h3>v0x</h3>
+                                                                <span>Admin</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">09/29/2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <p class="mb-0">Slap should be working fine now, download it again! </p>
+                                            </div>
+                                        </div>
+                                                <div class="announcements box mb-3">
+                                                <div class="title">
+                                                    <div class="row">
+                                                        <div class="col-md-7">
+                                                            <div class="d-flex align-items-center"><img src="./Slap - Dashboard_files/Za2zHmpEqz.png" alt="Profile picture" class="img-fluid"><div class="user">
+                                                                <h3>v0x</h3>
+                                                                <span>Admin</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">09/29/2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <p class="mb-0">We are doing some maintenance on slap, maybe the client will be offline for a few hours.</p>
+                                            </div>
+                                        </div>
+                                                <div class="announcements box mb-3">
+                                                <div class="title">
+                                                    <div class="row">
+                                                        <div class="col-md-7">
+                                                            <div class="d-flex align-items-center"><img src="./Slap - Dashboard_files/Za2zHmpEqz.png" alt="Profile picture" class="img-fluid"><div class="user">
+                                                                <h3>v0x</h3>
+                                                                <span>Admin</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">09/25/2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <p class="mb-0">We are temporarily accepting PayPal, if you want to buy using PayPal, create a ticket on our <a href="https://slapp.in/dashboard/slapp.in/discord">discord</a></p>
+                                            </div>
+                                        </div>
+                                                <div class="announcements box mb-3">
+                                                <div class="title">
+                                                    <div class="row">
+                                                        <div class="col-md-7">
+                                                            <div class="d-flex align-items-center"><img src="./Slap - Dashboard_files/Za2zHmpEqz.png" alt="Profile picture" class="img-fluid"><div class="user">
+                                                                <h3>v0x</h3>
+                                                                <span>Admin</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">12/23/2021</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <p class="mb-0">Hi everyone, we are happy to announce the first official version of Slap Client! Along with that, we have a Christmas discount coupon (XMAS) which offers 20% off the client.<br><br>Merry Christmas🎄🎅</p>
+                                            </div>
+                                        </div>                                    </div>
+                                    <!-- announcements -->
+
+                                    <!-- changelogs -->
+                                    <div class="carousel-item">
+                                        <div class="title d-flex align-items-center">
+                                            <i onclick="switchCarousel(0)" class="fas fa-chevron-left"></i>
+                                            <h2>Changelogs</h2>
+                                        </div>
+                                        
+                                            <div class="changelogs box mb-3">
+                                            <div class="title">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="d-flex align-items-center">
+                                                        <div class="user">
+                                                                <h3 class="mb-0">Slap Client</h3>
+                                                                <span>• v1.29<span>
+                                                            </span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">04/19/2023</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <ul style="padding-left: 0; margin-bottom: 0;"><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Inventory CPS to clicker</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Randomization conditional to clicker</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> More randomization to AimAsssist</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> internal improvements</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Vertical AimAssist</li></ul>
+                                            </div>
+                                        </div>
+                                            <div class="changelogs box mb-3">
+                                            <div class="title">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="d-flex align-items-center">
+                                                        <div class="user">
+                                                                <h3 class="mb-0">Slap Client</h3>
+                                                                <span>• v1.28<span>
+                                                            </span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">09/25/2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <ul style="padding-left: 0; margin-bottom: 0;"><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Reach improvements</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Nametags</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> NoWeb</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Lunar Client Crash 1.7.10</li></ul>
+                                            </div>
+                                        </div>
+                                            <div class="changelogs box mb-3">
+                                            <div class="title">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="d-flex align-items-center">
+                                                        <div class="user">
+                                                                <h3 class="mb-0">Slap Client</h3>
+                                                                <span>• v1.27 (Bug fix)<span>
+                                                            </span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">09/12/2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <ul style="padding-left: 0; margin-bottom: 0;"><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Some bugs</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Config system</li></ul>
+                                            </div>
+                                        </div>
+                                            <div class="changelogs box mb-3">
+                                            <div class="title">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="d-flex align-items-center">
+                                                        <div class="user">
+                                                                <h3 class="mb-0">Slap Client</h3>
+                                                                <span>• v1.27<span>
+                                                            </span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">02/07/2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <ul style="padding-left: 0; margin-bottom: 0;"><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Custom Duration to Notifications</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Timer</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Stealer</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Lunar Client super laggy</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Possible crashes</li></ul>
+                                            </div>
+                                        </div>
+                                            <div class="changelogs box mb-3">
+                                            <div class="title">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="d-flex align-items-center">
+                                                        <div class="user">
+                                                                <h3 class="mb-0">Slap Client</h3>
+                                                                <span>• v1.26<span>
+                                                            </span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">01/20/2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <ul style="padding-left: 0; margin-bottom: 0;"><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> TargetHud</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Now you can use a mouse button as a keybind</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Custom min pitch to BridgeAssist</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> MCF will unfriend people if you click on them again</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Notification when you add/remove a friend</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Needing fast render disabled for render modules</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Clock behind/ahead error</li></ul>
+                                            </div>
+                                        </div>
+                                            <div class="changelogs box mb-3">
+                                            <div class="title">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="d-flex align-items-center">
+                                                        <div class="user">
+                                                                <h3 class="mb-0">Slap Client</h3>
+                                                                <span>• v1.25<span>
+                                                            </span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">01/12/2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <ul style="padding-left: 0; margin-bottom: 0;"><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> AutoArmor</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Notifications</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Combo Assist to Clicker</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Crash using Misplace</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="removed">removed</span> Chams due several bugs</li></ul>
+                                            </div>
+                                        </div>
+                                            <div class="changelogs box mb-3">
+                                            <div class="title">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="d-flex align-items-center">
+                                                        <div class="user">
+                                                                <h3 class="mb-0">Slap Client</h3>
+                                                                <span>• v1.2<span>
+                                                            </span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">01/05/2022</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <ul style="padding-left: 0; margin-bottom: 0;"><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Chams</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Skeleton to Player ESP</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Arraylist Watermark</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Delay to bridge assist</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> HideNames</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Better AimAssist again</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> A really better Wtap</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Outdated version warning</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Better AimAssist Multipoint</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> BridgeAssist on 1.7.10</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> FastPlace not working with Toggle mode</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Remove bots not working properly</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Keybinds working on chat</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Crash on BLC/Forge</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Random crashes</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Hitbox accuracy</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Hand disappearing sometimes</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span>  Keybind working when choosing a keybind</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Limit hits not working</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Profiles crashing</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> White screen when using aim assist</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Jitter working without autoclicker</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> PlayerESP Lagging on lunar 1.7.10</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Radar/Arrows lagging</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Crash on Windows 7 </li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Able to open more than one instance</li></ul>
+                                            </div>
+                                        </div>
+                                            <div class="changelogs box mb-3">
+                                            <div class="title">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="d-flex align-items-center">
+                                                        <div class="user">
+                                                                <h3 class="mb-0">Slap Client</h3>
+                                                                <span>• v1.1<span>
+                                                            </span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">12/30/2021</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <ul style="padding-left: 0; margin-bottom: 0;"><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span>  Multipoint to AimAssist</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Better Aim Assist</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Limit Hits to Reach</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> 3rd person view to PlayerESP</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> When held option to Keybinds</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Attack required to Clicker (Need when held option)</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Require RMB Down to FastPlace (Need when held option)</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Refill</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> WTap</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Wrong width of Arraylist text</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Hypixel AntiBot</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Player flicking while hitbox enabled</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> Crash on config load</li><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="fixed">fixed</span> AutoPot</li></ul>
+                                            </div>
+                                        </div>
+                                            <div class="changelogs box mb-3">
+                                            <div class="title">
+                                                <div class="row">
+                                                    <div class="col-md-7">
+                                                        <div class="d-flex align-items-center">
+                                                        <div class="user">
+                                                                <h3 class="mb-0">Slap Client</h3>
+                                                                <span>• 1.0<span>
+                                                            </span></span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5 d-flex justify-content-end ">
+                                                        <span class="date">12/23/2021</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <ul style="padding-left: 0; margin-bottom: 0;"><li style="list-style-type: none; margin-left: 0; margin-top: .4rem; margin-bottom:.4rem"><span class="added">added</span> Initial release</li></ul>
+                                            </div>
+                                        </div>                                    </div>
+                                    <!-- changelogs -->
+
+                                    <!-- change password -->
+                                    <div class="carousel-item">
+                                        <div class="title d-flex align-items-center">
+                                            <i onclick="switchCarousel(0)" class="fas fa-chevron-left"></i>
+                                            <h2>Change Password</h2>
+                                        </div>
+                                        <div class="box mb-3">
+                                            <form method="POST" id="change-pass-form">
+                                                <div class="form-input-icon mb-3">
+                                                    <i class="fas fa-lock"></i>
+                                                    <input class="auth-input" type="password" placeholder="Current password" name="current-password" autocomplete="off" required="" minlength="8" pattern="^(?!^\s.*$)(?!^.*\s$)[ -~]+$" id="current-password">
+                                                </div>
+                                                <div class="form-input-icon mb-3">
+                                                    <i class="fas fa-lock"></i>
+                                                    <input class="auth-input" type="password" placeholder="New password" name="new-password" autocomplete="off" required="" minlength="8" pattern="^(?!^\s.*$)(?!^.*\s$)[ -~]+$" id="new-password">
+                                                </div>
+                                                <button href="#" class="button primary d-block mt-3 w-100" id="change-pass-button">Change</button>
+                                        </form>
+                                        </div>
+                                    </div>
+                                    <!-- change password  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="overlay-top-right"></div>
+    <div class="overlay-bottom-right"></div>
+    <div class="overlay-bottom-left"></div>
+
+
+<script src="./Slap - Dashboard_files/core@2" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="./Slap - Dashboard_files/bootstrap.js.stáhnout"></script>
+
+<!-- CORE -->
+<script src="./Slap - Dashboard_files/core.js.stáhnout"></script>
+
+<!-- Start AOS -->
+<script>
+    AOS.init({
+        disable: 'mobile',
+        once: true,
+    });
+</script>
+
+<script>
+    function remove_profile_picture() {
+        var key = '0499f4f3b06457c11f60f79a13c0ea0b';
+        $.ajax({
+            url: 'php/remove_profile_picture.php',
+            contentType: "text/html; charset=UTF-8",
+            type: 'GET',
+            data: {
+                "key": key
+            },
+            cache: false,
+            async: true,
+            contentType: false,
+            success: function(response) {
+                switch (response) {
+                    case "deleted":
+                        location.reload();
+                        break;
+                    default:
+                        notify("Some unknown error has occurred, please try again later.", 0);
+                        break;;
+                }
+            },
+            error: function() {
+                notify("Some unknown error has occurred, please try again later.", 0);
+            }
+        });
+    }
+</script>
+
+<script>
+    function copy_code(code) {
+        navigator.clipboard.writeText(code);
+        notify("Coupon code copied to clipboard", 1);
+        $("#copy-text-p").text("Coupon code copied");
+    }
+    $(".discount-box").mouseleave(function() {
+        setTimeout(
+            function() {
+                $("#copy-text-p").text("Click to copy the coupon code");
+            }, 150);
+    });
+</script>
+
+<!-- bootstrap carousel and other stuff-->
+<script>
+    $(document).ready(function() {
+        $('#mainCarousel').carousel({
+            pause: true,
+            interval: false
+        });
+        var need_load = 0;
+        if (need_load == 1) {
+            setTimeout(function() {
+                $("#loading").addClass("active");
+                $("#dashboard").addClass("loading");
+            }, 200);
+            setTimeout(function() {
+                $("#loading").removeClass("active");
+                $("#loading").addClass("final");
+                $("#dashboard").removeClass("loading");
+                $("#dashboard").removeClass("initial");
+                setTimeout(function() {
+                    $("#loading").addClass("d-none");
+                }, 100);
+            }, 3000);
+        } else {
+            $("#dashboard").removeClass("initial");
+        }
+    });
+
+    function switchCarousel(page) {
+        $('.carousel').carousel(page);
+        if (is_mobile() && page == 4) {
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+    }
+    </script>
+
+<script>
+    function resetHwid() {
+        var key = '0499f4f3b06457c11f60f79a13c0ea0b';
+        $.ajax({
+            url: 'php/reset_hwid.php',
+            contentType: "text/html; charset=UTF-8",
+            type: 'GET',
+            data: {
+                "key": key
+            },
+            cache: false,
+            async: true,
+            contentType: false,
+            success: function(response) {
+                location.reload();
+            },
+            error: function() {
+                notify("Some unknown error has occurred, please try again later.", 0);
+            }
+        });
+    }
+</script>
+
+<script>
+    function tempDisable(status) {
+        var key = '0499f4f3b06457c11f60f79a13c0ea0b';
+        $.ajax({
+            url: 'php/temp_disable.php',
+            contentType: "text/html; charset=UTF-8",
+            type: 'GET',
+            data: {
+                "key": key,
+                "status": status
+            },
+            cache: false,
+            async: true,
+            contentType: false,
+            success: function(response) {
+                location.reload();
+            },
+            error: function() {
+                notify("Some unknown error has occurred, please try again later.", 0);
+            }
+        });
+    }
+</script>
+
+<script>
+    $('.profile-picture').mouseenter(function() {
+        $(this).addClass('active');
+    });
+    $('.profile-picture').mouseleave(function() {
+        $(this).removeClass('active');
+    });
+
+    $('#profile-picture-input').change(function() {
+        $('#form-picture').submit();
+    })
+</script>
+
+<script>
+    $("#change-pass-form").submit(function(e) {
+        e.preventDefault();
+
+        if ($('#change-pass-button').hasClass('disabled'))
+            return;
+
+        $('#change-pass-button').addClass('disabled');
+        var data = new FormData($('#change-pass-form')[0]);
+        $.ajax({
+            url: 'php/change_pass.php',
+            contentType: "text/html; charset=UTF-8",
+            type: 'POST',
+            data: data,
+            cache: false,
+            async: true,
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                switch (response) {
+                    case 'new_same_as_current':
+                        notify("The new password is the same as the current one.", 0);
+                        break;
+                    case 'wrong_current_password':
+                        notify("This is not your current password.", 0);
+                        break;
+                    case 'long_password':
+                        notify("Your password is too long.", 0);
+                        break;
+                    case 'changed':
+                        notify("Your password has been changed", 1);
+                        break;
+                }
+                // reset inputs
+                $('#current-password').val("");
+                $('#new-password').val("");
+            },
+            error: function() {
+                notify("Some unknown error has occurred, please try again later.", 0);
+            }
+        });
+        setTimeout(
+            function() {
+                $('#change-pass-button').removeClass('disabled').delay(800);
+            }, 700);
+    });
+</script>
+
+</body><!-- BOOTSTRAP JS --></html>
