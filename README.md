@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Krenzo</h1>
 <h3 align="center">I'm C# Developer for 3 Years - Teaching UIS.</h3>
 
-- 🔭 I’m currently working on **EkraTweaker**
+- 🔭 I’m currently working on **Blackdots**
 
 - 🌱 I’m currently learning **UI like C++**
 
